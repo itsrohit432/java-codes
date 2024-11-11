@@ -1,0 +1,53 @@
+ Write a program in JAVA to demonstrate the method and constructor overloading:
+
+Constructor Overloading:
+
+public class Student{
+    int id; 
+    String name;
+
+    Student(){
+        System.out.println("this a default constructor");
+    }
+    Student(int i, String n){
+        id = i; 
+        name = n;
+    }
+
+    public static void main(String[] args){
+        Student s = new Student();
+        System.out.println("\nDefault Constructor values: \n");
+        System.out.println("Student Id : "+s.id + "\nStudent Name : "+s.name);
+        
+        System.out.println("\nParameterized Constructor values: \n");
+        Student student = new Student(10, "David");
+        System.out.println("Student Id : "+student.id + "\nStudent Name : "+student.name);
+    }
+}
+
+Method overloading:
+Method Overloading: changing no. of arguments:
+
+class Adder{
+    static int add(int a,int b){return a+b;}
+    static int add(int a,int b,int c){return a+b+c;} 
+}
+class TestOverloading1{
+    public static void main(String[] args){
+        System.out.println(Adder.add(11,11));
+        System.out.println(Adder.add(11,11,11));
+    }
+}
+
+Method Overloading: changing data type of arguments:
+
+class Adder1{
+    static int add(int a, int b){return a+b;}
+    static double add(double a, double b){return a+b;}
+}
+class TestOverloading2{
+    public static void main(String[] args){
+        System.out.println(Adder1.add(11,11));
+        System.out.println(Adder1.add(12.3,12.6));
+    }
+}
